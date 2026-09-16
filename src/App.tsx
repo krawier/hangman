@@ -31,8 +31,15 @@ function App() {
       </div>
 
       <HangmanDrawing></HangmanDrawing>
-      <HangmanWord></HangmanWord>
+      <HangmanWord guessedLetters={guessedLetters} word={wordToGuess}></HangmanWord>
+      
+      <div style={{alignSelf: "stretch"}}>
+
       <KeyBoard></KeyBoard>
+
+
+      </div>
+      
 
 
     </div>
