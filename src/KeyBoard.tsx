@@ -1,3 +1,5 @@
+import styles from "./KeyBoard.module.css"
+
 const KEYS = [
   "a",
   "b",
@@ -38,7 +40,7 @@ export function KeyBoard(){
 
    {KEYS.map(key => {
 
-      return <button key={key}>{key}</button>
+      return <button className={` ${styles.btn} `} key={key}>{key}</button>
 
    })}
 
