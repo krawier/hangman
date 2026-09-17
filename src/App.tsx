@@ -10,6 +10,9 @@ function App() {
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([])
 
+  const wrongLetters = guessedLetters.filter( letter => !wordToGuess.includes(letter))
+
+
   return ( 
     <div style = {{
     maxWidth: "800px",
@@ -30,7 +33,7 @@ function App() {
 
       </div>
 
-      <HangmanDrawing></HangmanDrawing>
+      <HangmanDrawing numberOfGuesses = {wrongLetters.length}></HangmanDrawing>
       <HangmanWord guessedLetters={guessedLetters} word={wordToGuess}></HangmanWord>
       
       <div style={{alignSelf: "stretch"}}>
