@@ -70,7 +70,11 @@ function App() {
       
       <div style={{alignSelf: "stretch"}}>
 
-      <KeyBoard></KeyBoard>
+      <KeyBoard 
+        activeLetters={guessedLetters.filter(letter => wordToGuess.includes(letter))} 
+        inactiveLetters={wrongLetters} 
+        addGuessedLetter={addGuessedLetter} 
+      />
 
 
       </div>
